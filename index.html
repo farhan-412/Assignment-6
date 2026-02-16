@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ENGLISH-JANALA</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <style>
+        .active {
+            background-color: #422AD5;
+            color: #FFFFFF;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- nav bar -->
+
+    <header id="navBar"
+        class="fixed top-0 mb-10 flex justify-between w-full bg-gray-200 p-3 border-b-2 border-gray-400 hidden">
+        <div class="flex justify-center items-center font-semibold text-xl">English<img src="assets/logo.png"
+                alt="">জানালা</div>
+        <div class="flex gap-5">
+            <button id="faqBtn" class="btn hover:bg-teal-500 hover:text-white text-blue-700 border-blue-700"><img
+                    src="assets/fa-circle-question.png" alt="">FAQ</button>
+            <button id="learnBtn" class="btn hover:bg-teal-700 hover:text-white text-blue-700 border-blue-700"><img
+                    src="assets/fa-book-open.png" alt="">Learn</button>
+            <button class="btn hover:bg-teal-700 hover:text-white text-blue-700 border-blue-700"><img
+                    src="assets/fa-arrow-right-from-bracket.png" alt="">Logout</button>
+        </div>
+    </header>
+
+    <main>
+        <!-- hero section -->
+        <section id="heroSection" class="flex justify-center items-center mx-auto gap-20 ">
+            <div class="w-2/5">
+                <h1 class="font-bold text-3xl"><span class="text-blue-400">English</span> is Easy!!</h1>
+                <p class="text-[#79716B] py-3 text-justify">আজ থেকেই আপনার ভাষা শেখার যাত্রা শুরু করুন। আপনি যদি নতুন হন
+                    অথবা
+                    আপনার দক্ষতা বাড়াতে চান, আমাদের
+                    Interactive Lessons আপনাকে নিয়ে যাবে অন্য একটি Level এ</p>
+                <br>
+                <input type="text" placeholder="Enter Your Name" id="handleText" class="input " /> <br>
+                <input type="password" placeholder="123456" value="123456" id="handlePassword" class="input my-3" />
+                <br>
+                <button id="handleBtn" class="btn bg-blue-700 text-white">Get Started</button>
+            </div>
+            <div>
+                <img src="assets/hero-student.png" alt="">
+            </div>
+        </section>
+
+        <!-- Learn Vocabularies -->
+        <section id="learnVocabulary" class="mt-72 hidden">
+            <h1 class="text-3xl font-bold text-center mt-10">
+                <span class="text-blue-400">Let's</span> Learn Vocabularies
+            </h1>
+            <div id="lesson-btn-container" class="flex justify-center my-5 gap-10">
+
+
+            </div>
+            <div id="word-container" class=" rounded-xl m-10 p-10 bg-[#F8F8F8] gap-5 text-center">
+                <div class="">
+                    <h3 class="text-[#79716B] text-xs pb-3 ">আপনি এখনো কোন Lesson Select করেন নাই</h3>
+                    <h1 class="text-3xl font-semibold">একটি Lesson Select করুন।</h1>
+                </div>
+            </div>
+
+            <!-- You can open the modal using ID.showModal() method -->
+            <div id="wordInfoContainer">
+
+            </div>
+        </section>
+
+        <!-- Frequently  Ask Question-->
+        <section id="askQuestion" class="mt-10 hidden">
+            <h1 class="text-3xl font-bold text-center mt-10"><span class="text-blue-400">Freduently</span> Asked
+                Questions
+            </h1>
+            <div class="m-10 flex-col gap10">
+                <div class="bg-[#F8F8F8] rounded-xl m-2 collapse collapse-plus bg-base-100 border border-base-300">
+                    <input type="radio" name="my-accordion-3" checked="checked" />
+                    <div class="collapse-title font-semibold">1. What is the different between let, var & const?</div>
+                    <div class="collapse-content text-gray-500 text-sm">
+                        <ol class="list-disc ml-5">
+                            <li>var is the old method and may cause errors.</li>
+                            <li>let and const are modern and safer.</li>
+                            <li>const is preferred when the value should not change.</li>
+                        </ol>
+                    </div>
+                </div>
+                <div class="bg-[#F8F8F8] rounded-xl  m-2 collapse collapse-plus bg-base-100 border border-base-300">
+                    <input type="radio" name="my-accordion-3" />
+                    <div class="collapse-title font-semibold">2. What is the different between map(), forEach() &
+                        filter()
+                    </div>
+                    <div class="collapse-content text-gray-500 text-sm">
+                        <ol class="list-disc ml-5">
+                            <li>Use map() when you want to modify each element.</li>
+                            <li>Use forEach() when you only need to loop through values.</li>
+                            <li>Use filter() when you want to extract specific elements.</li>
+                        </ol>
+                    </div>
+                </div>
+                <div class="bg-[#F8F8F8] rounded-xl m-2 collapse collapse-plus bg-base-100 border border-base-300">
+                    <input type="radio" name="my-accordion-3" />
+                    <div class="collapse-title font-semibold">3. What are arrow functions and how are they different
+                        form
+                        regular functions?</div>
+                    <div class="collapse-content text-gray-500 text-sm">Arrow functions are a shorter way to write
+                        functions in JavaScript
+                        using the => syntax.
+                        They do not have their own this keyword and inherit it from the surrounding scope. Regular
+                        functions
+                        use the function keyword,
+                        have their own this, and can be used as constructors. Arrow functions are best for short, simple
+                        functions, while regular
+                        functions are used when more control is needed.</div>
+                </div>
+                <div class="bg-[#F8F8F8] rounded-xl m-2 collapse collapse-plus bg-base-100 border border-base-300">
+                    <input type="radio" name="my-accordion-3" />
+                    <div class="collapse-title font-semibold">4. How do Javascript Promises work?</div>
+                    <div class="collapse-content text-gray-500 text-sm">JavaScript Promises are used to handle
+                        asynchronous operations
+                        such as fetching data from a server.A Promise represents a value that may be available now,
+                        later,
+                        or never. A Promise has three states: pending (initial state), fulfilled (operation completed
+                        successfully), and rejected (operation failed). When a Promise is fulfilled, the result is
+                        handled
+                        using .then(), and when it is rejected, the error is handled using .catch(). Promises help avoid
+                        callback hell and make asynchronous code easier to read and manage.</div>
+                </div>
+                <div class="bg-[#F8F8F8] rounded-xl m-2 collapse collapse-plus bg-base-100 border border-base-300">
+                    <input type="radio" name="my-accordion-3" />
+                    <div class="collapse-title font-semibold">5. How does closure work in Javascript?</div>
+                    <div class="collapse-content text-gray-500 text-sm">A closure in JavaScript is created when a
+                        function remembers and
+                        can access variables from its outer scope, even after the outer function has finished executing.
+                        This happens because functions in JavaScript retain a reference to the environment in which they
+                        were created. Closures are commonly used for data hiding and maintaining state in programs.
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- footer section -->
+    <footer class="flex justify-between items-center mx-auto border-t-2 border-[#FFEBEB]">
+        <div class="m-5">
+            <div class="flex gap-2 items-center font-medium text-xl">English<img src="assets/logo.png" alt="">জানালা
+            </div>
+            <h3 class="py-2 text-sm">ইংরেজি শিখুন সহজে</h3>
+            <h5 class="text-xs">Providing ED-Tech Applications since 2025</h5>
+        </div>
+        <div>
+            <h1>follow us</h1>
+            <div class="flex justify-center items-center gap-2">
+                <img src="assets/fb-thumb.png" alt="">
+                <img src="assets/instagram-thumb.png" alt="">
+                <img src="assets/github-thumb.png" alt="">
+            </div>
+        </div>
+    </footer>
+
+    <script src="script/lesson.js"></script>
+    <script src="script/design.js"></script>
+</body>
+
+</html>
